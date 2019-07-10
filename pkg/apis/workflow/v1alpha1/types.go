@@ -164,6 +164,11 @@ type WorkflowSpec struct {
 
 	// Priority to apply to workflow pods.
 	PodPriority *int32 `json:"podPriority,omitempty"`
+
+	// SecurityContext holds pod-level security attributes and common container settings.
+	// Optional: Defaults to empty.  See type description for default values of each field.
+	// +optional
+	SecurityContext *apiv1.PodSecurityContext `json:"securityContext,omitempty"`
 }
 
 // Template is a reusable and composable unit of execution in a workflow
@@ -252,6 +257,11 @@ type Template struct {
 
 	// Priority to apply to workflow pods.
 	Priority *int32 `json:"priority,omitempty"`
+
+	// SecurityContext holds pod-level security attributes and common container settings.
+	// Optional: Defaults to empty.  See type description for default values of each field.
+	// +optional
+	SecurityContext *apiv1.PodSecurityContext `json:"securityContext,omitempty"`
 }
 
 // Inputs are the mechanism for passing parameters, artifacts, volumes from one template to another

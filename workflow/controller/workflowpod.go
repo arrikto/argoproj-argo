@@ -488,6 +488,13 @@ func addSchedulingConstraints(pod *apiv1.Pod, wfSpec *wfv1.WorkflowSpec, tmpl *w
 	} else if wfSpec.SchedulerName != "" {
 		pod.Spec.SchedulerName = wfSpec.SchedulerName
 	}
+
+	// set pod security context
+	if tmpl.SecurityContext != nil {
+		pod.Spec.SecurityContext = tmpl.SecurityContext
+	} else if wfSpec.SecurityContext != nil {
+		pod.Spec.SecurityContext = wfSpec.SecurityContext
+	}
 }
 
 // addVolumeReferences adds any volumeMounts that a container/sidecar is referencing, to the pod.spec.volumes
