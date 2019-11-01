@@ -5,7 +5,7 @@ import (
 	"os"
 	"sync"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
 	"github.com/argoproj/pkg/errors"
 	"github.com/spf13/cobra"
 	apierr "k8s.io/apimachinery/pkg/api/errors"

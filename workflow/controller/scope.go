@@ -3,8 +3,8 @@ package controller
 import (
 	"strings"
 
-	"github.com/argoproj/argo/errors"
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/errors"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
 )
 
 // wfScope contains the current scope of variables available when executing a template

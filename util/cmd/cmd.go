@@ -9,7 +9,7 @@ import (
 	"os/user"
 	"strings"
 
-	"github.com/argoproj/argo"
+	"github.com/arrikto/argoproj-argo"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

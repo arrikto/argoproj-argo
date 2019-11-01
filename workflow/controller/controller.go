@@ -22,12 +22,12 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
 
-	"github.com/argoproj/argo"
-	wfclientset "github.com/argoproj/argo/pkg/client/clientset/versioned"
-	"github.com/argoproj/argo/workflow/common"
-	"github.com/argoproj/argo/workflow/metrics"
-	"github.com/argoproj/argo/workflow/ttlcontroller"
-	"github.com/argoproj/argo/workflow/util"
+	"github.com/arrikto/argoproj-argo"
+	wfclientset "github.com/arrikto/argoproj-argo/pkg/client/clientset/versioned"
+	"github.com/arrikto/argoproj-argo/workflow/common"
+	"github.com/arrikto/argoproj-argo/workflow/metrics"
+	"github.com/arrikto/argoproj-argo/workflow/ttlcontroller"
+	"github.com/arrikto/argoproj-argo/workflow/util"
 )
 
 // WorkflowController is the controller for workflow resources

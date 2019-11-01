@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	fakewfclientset "github.com/argoproj/argo/pkg/client/clientset/versioned/fake"
-	"github.com/argoproj/argo/test"
-	"github.com/argoproj/argo/workflow/util"
+	fakewfclientset "github.com/arrikto/argoproj-argo/pkg/client/clientset/versioned/fake"
+	"github.com/arrikto/argoproj-argo/test"
+	"github.com/arrikto/argoproj-argo/workflow/util"
 	"github.com/stretchr/testify/assert"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"

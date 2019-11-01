@@ -6,9 +6,9 @@ import (
 	"github.com/ghodss/yaml"
 	"github.com/stretchr/testify/assert"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/argoproj/argo/test"
-	"github.com/argoproj/argo/workflow/common"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/test"
+	"github.com/arrikto/argoproj-argo/workflow/common"
 )
 
 // validate is a test helper to accept YAML as a string and return
@@ -808,7 +808,7 @@ spec:
       - name: argo-source
         path: /src
         git:
-          repo: https://github.com/argoproj/argo.git
+          repo: https://github.com/arrikto/argoproj-argo.git
     container:
       image: alpine:latest
       command: [sh, -c]

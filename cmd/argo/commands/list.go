@@ -17,10 +17,10 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/selection"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/argoproj/argo/pkg/client/clientset/versioned/typed/workflow/v1alpha1"
-	"github.com/argoproj/argo/workflow/common"
-	"github.com/argoproj/argo/workflow/util"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/pkg/client/clientset/versioned/typed/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/workflow/common"
+	"github.com/arrikto/argoproj-argo/workflow/util"
 )
 
 type listFlags struct {

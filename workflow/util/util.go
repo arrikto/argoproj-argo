@@ -28,23 +28,23 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo/errors"
-	"github.com/argoproj/argo/pkg/apis/workflow"
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/argoproj/argo/pkg/client/clientset/versioned/typed/workflow/v1alpha1"
-	cmdutil "github.com/argoproj/argo/util/cmd"
-	"github.com/argoproj/argo/util/file"
-	"github.com/argoproj/argo/util/retry"
-	unstructutil "github.com/argoproj/argo/util/unstructured"
-	"github.com/argoproj/argo/workflow/common"
-	"github.com/argoproj/argo/workflow/validate"
+	"github.com/arrikto/argoproj-argo/errors"
+	"github.com/arrikto/argoproj-argo/pkg/apis/workflow"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/pkg/client/clientset/versioned/typed/workflow/v1alpha1"
+	cmdutil "github.com/arrikto/argoproj-argo/util/cmd"
+	"github.com/arrikto/argoproj-argo/util/file"
+	"github.com/arrikto/argoproj-argo/util/retry"
+	unstructutil "github.com/arrikto/argoproj-argo/util/unstructured"
+	"github.com/arrikto/argoproj-argo/workflow/common"
+	"github.com/arrikto/argoproj-argo/workflow/validate"
 )
 
 // NewWorkflowInformer returns the workflow informer used by the controller. This is actually
 // a custom built UnstructuredInformer which is in actuality returning unstructured.Unstructured
 // objects. We no longer return WorkflowInformer due to:
 // https://github.com/kubernetes/kubernetes/issues/57705
-// https://github.com/argoproj/argo/issues/632
+// https://github.com/arrikto/argoproj-argo/issues/632
 func NewWorkflowInformer(cfg *rest.Config, ns string, resyncPeriod time.Duration, tweakListOptions internalinterfaces.TweakListOptionsFunc) cache.SharedIndexInformer {
 	dclient, err := dynamic.NewForConfig(cfg)
 	if err != nil {

@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/argoproj/argo/pkg/apis/workflow"
+	"github.com/arrikto/argoproj-argo/pkg/apis/workflow"
 	"github.com/ghodss/yaml"
 	"github.com/gorilla/websocket"
 	log "github.com/sirupsen/logrus"
@@ -24,9 +24,9 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/remotecommand"
 
-	"github.com/argoproj/argo/errors"
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/argoproj/argo/util"
+	"github.com/arrikto/argoproj-argo/errors"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/util"
 )
 
 // FindOverlappingVolume looks an artifact path, checks if it overlaps with any

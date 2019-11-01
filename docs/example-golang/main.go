@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	wfclientset "github.com/argoproj/argo/pkg/client/clientset/versioned"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	wfclientset "github.com/arrikto/argoproj-argo/pkg/client/clientset/versioned"
 	"github.com/argoproj/pkg/errors"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/argoproj/argo/errors"
+	"github.com/arrikto/argoproj-argo/errors"
 	pkgerr "github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 )

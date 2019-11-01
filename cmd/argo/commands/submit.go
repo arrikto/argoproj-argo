@@ -10,10 +10,10 @@ import (
 	"github.com/argoproj/pkg/json"
 	"github.com/spf13/cobra"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	cmdutil "github.com/argoproj/argo/util/cmd"
-	"github.com/argoproj/argo/workflow/common"
-	"github.com/argoproj/argo/workflow/util"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	cmdutil "github.com/arrikto/argoproj-argo/util/cmd"
+	"github.com/arrikto/argoproj-argo/workflow/common"
+	"github.com/arrikto/argoproj-argo/workflow/util"
 )
 
 // cliSubmitOpts holds submition options specific to CLI submission (e.g. controlling output)

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/argoproj/argo/test"
-	"github.com/argoproj/argo/workflow/util"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/test"
+	"github.com/arrikto/argoproj-argo/workflow/util"
 	"github.com/stretchr/testify/assert"
 	apiv1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
@@ -897,7 +897,7 @@ metadata:
   labels:
     image: foo:bar
   annotations:
-    k8s-webhook-handler.io/repo: "git@github.com:argoproj/argo.git"
+    k8s-webhook-handler.io/repo: "git@github.com:arrikto/argoproj-argo.git"
     k8s-webhook-handler.io/revision: 1e111caa1d2cc672b3b53c202b96a5f660a7e9b2
 spec:
   entrypoint: foo
@@ -938,7 +938,7 @@ func TestMetadataPassing(t *testing.T) {
 	for _, ev := range container.Env {
 		switch ev.Name {
 		case "REPO":
-			assert.Equal(t, "git@github.com:argoproj/argo.git", ev.Value)
+			assert.Equal(t, "git@github.com:arrikto/argoproj-argo.git", ev.Value)
 			foundRepo = true
 		case "REVISION":
 			assert.Equal(t, "1e111caa1d2cc672b3b53c202b96a5f660a7e9b2", ev.Value)

@@ -3,7 +3,7 @@ package file_test
 import (
 	"archive/tar"
 	"bytes"
-	"github.com/argoproj/argo/util/file"
+	"github.com/arrikto/argoproj-argo/util/file"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

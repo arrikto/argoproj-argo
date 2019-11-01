@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
 	"github.com/go-openapi/spec"
 	"k8s.io/kube-openapi/pkg/common"
 )
@@ -50,11 +50,11 @@ func main() {
 
 // swaggify converts the github package
 // e.g.:
-// github.com/argoproj/argo/pkg/apis/workflow/v1alpha1.Workflow
+// github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1.Workflow
 // to:
 // io.argoproj.workflow.v1alpha1.Workflow
 func swaggify(name string) string {
-	name = strings.Replace(name, "github.com/argoproj/argo/pkg/apis", "argoproj.io", -1)
+	name = strings.Replace(name, "github.com/arrikto/argoproj-argo/pkg/apis", "argoproj.io", -1)
 	parts := strings.Split(name, "/")
 	hostParts := strings.Split(parts[0], ".")
 	// reverses something like k8s.io to io.k8s

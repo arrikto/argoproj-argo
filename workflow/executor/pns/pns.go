@@ -17,10 +17,10 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/argoproj/argo/errors"
-	"github.com/argoproj/argo/util/archive"
-	"github.com/argoproj/argo/workflow/common"
-	execcommon "github.com/argoproj/argo/workflow/executor/common"
+	"github.com/arrikto/argoproj-argo/errors"
+	"github.com/arrikto/argoproj-argo/util/archive"
+	"github.com/arrikto/argoproj-argo/workflow/common"
+	execcommon "github.com/arrikto/argoproj-argo/workflow/executor/common"
 )
 
 type PNSExecutor struct {

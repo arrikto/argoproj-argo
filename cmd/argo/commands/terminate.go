@@ -7,7 +7,7 @@ import (
 	"github.com/argoproj/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/argoproj/argo/workflow/util"
+	"github.com/arrikto/argoproj-argo/workflow/util"
 )
 
 func NewTerminateCommand() *cobra.Command {

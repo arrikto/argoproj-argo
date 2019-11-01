@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/argoproj/argo/workflow/config"
+	"github.com/arrikto/argoproj-argo/workflow/config"
 
-	wfv1 "github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/argoproj/argo/workflow/common"
+	wfv1 "github.com/arrikto/argoproj-argo/pkg/apis/workflow/v1alpha1"
+	"github.com/arrikto/argoproj-argo/workflow/common"
 	"github.com/ghodss/yaml"
 	"github.com/stretchr/testify/assert"
 	apiv1 "k8s.io/api/core/v1"

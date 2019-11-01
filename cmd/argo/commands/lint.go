@@ -7,8 +7,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
-	cmdutil "github.com/argoproj/argo/util/cmd"
-	"github.com/argoproj/argo/workflow/validate"
+	cmdutil "github.com/arrikto/argoproj-argo/util/cmd"
+	"github.com/arrikto/argoproj-argo/workflow/validate"
 )
 
 func NewLintCommand() *cobra.Command {

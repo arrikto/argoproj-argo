@@ -7,8 +7,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/argoproj/argo/errors"
-	"github.com/argoproj/argo/util"
+	"github.com/arrikto/argoproj-argo/errors"
+	"github.com/arrikto/argoproj-argo/util"
 	log "github.com/sirupsen/logrus"
 )
 

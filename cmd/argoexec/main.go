@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/argoproj/argo/cmd/argoexec/commands"
+	"github.com/arrikto/argoproj-argo/cmd/argoexec/commands"
 	// load the azure plugin (required to authenticate against AKS clusters).
 	_ "k8s.io/client-go/plugin/pkg/client/auth/azure"
 	// load the gcp plugin (required to authenticate against GKE clusters).
