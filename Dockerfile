@@ -67,7 +67,7 @@ RUN cd ${GOPATH}/src/dummy && \
     rmdir vendor
 
 # Perform the build
-WORKDIR /go/src/github.com/argoproj/argo
+WORKDIR /go/src/github.com/arrikto/argoproj-argo
 COPY . .
 ARG MAKE_TARGET="controller executor cli-linux-amd64"
 RUN make $MAKE_TARGET
@@ -77,14 +77,14 @@ RUN make $MAKE_TARGET
 # argoexec
 ####################################################################################################
 FROM argoexec-base as argoexec
-COPY --from=argo-build /go/src/github.com/argoproj/argo/dist/argoexec /usr/local/bin/
+COPY --from=argo-build /go/src/github.com/arrikto/argoproj-argo/dist/argoexec /usr/local/bin/
 
 
 ####################################################################################################
 # workflow-controller
 ####################################################################################################
 FROM scratch as workflow-controller
-COPY --from=argo-build /go/src/github.com/argoproj/argo/dist/workflow-controller /bin/
+COPY --from=argo-build /go/src/github.com/arrikto/argoproj-argo/dist/workflow-controller /bin/
 ENTRYPOINT [ "workflow-controller" ]
 
 
@@ -92,5 +92,5 @@ ENTRYPOINT [ "workflow-controller" ]
 # argocli
 ####################################################################################################
 FROM scratch as argocli
-COPY --from=argo-build /go/src/github.com/argoproj/argo/dist/argo-linux-amd64 /bin/argo
+COPY --from=argo-build /go/src/github.com/arrikto/argoproj-argo/dist/argo-linux-amd64 /bin/argo
 ENTRYPOINT [ "argo" ]

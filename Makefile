@@ -1,4 +1,4 @@
-PACKAGE=github.com/argoproj/argo
+PACKAGE=github.com/arrikto/argoproj-argo
 CURRENT_DIR=$(shell pwd)
 DIST_DIR=${CURRENT_DIR}/dist
 ARGO_CLI_NAME=argo
@@ -169,8 +169,8 @@ release-clis: cli-image
 	docker build --iidfile /tmp/argo-cli-build --target argo-build --build-arg MAKE_TARGET="cli-darwin cli-windows" .
 	docker create --name tmp-cli `cat /tmp/argo-cli-build`
 	mkdir -p ${DIST_DIR}
-	docker cp tmp-cli:/go/src/github.com/argoproj/argo/dist/argo-darwin-amd64 ${DIST_DIR}/argo-darwin-amd64
-	docker cp tmp-cli:/go/src/github.com/argoproj/argo/dist/argo-windows-amd64 ${DIST_DIR}/argo-windows-amd64
+	docker cp tmp-cli:/go/src/github.com/arrikto/argoproj-argo/dist/argo-darwin-amd64 ${DIST_DIR}/argo-darwin-amd64
+	docker cp tmp-cli:/go/src/github.com/arrikto/argoproj-argo/dist/argo-windows-amd64 ${DIST_DIR}/argo-windows-amd64
 	docker rm tmp-cli
 	docker create --name tmp-cli $(IMAGE_PREFIX)argocli:$(IMAGE_TAG)
 	docker cp tmp-cli:/bin/argo ${DIST_DIR}/argo-linux-amd64
